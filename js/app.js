@@ -459,6 +459,25 @@ weatherCodes = [
   }
 ];
 
+
+
+
+// icon weather functions ========================================================================================================
+
+function iconWeather(url) {
+  let str = "";
+  for (let i = 0; i < url.length; i++) {
+    const element = url[i];
+    str = element[0];
+  }
+  // console.log("From iconWeather function: ", str);
+  return str;
+}
+
+// end icon weather functions ===============================================================================================
+
+
+
 // generate html functions ========================================================================================================
 
 function generateHTML(data) {
@@ -527,19 +546,7 @@ function generateHTML(data) {
 }
 // end generate html functions ====================================================================================================
 
-// icon weather functions ========================================================================================================
 
-function iconWeather(url) {
-  let str = "";
-  for (let i = 0; i < url.length; i++) {
-    const element = url[i];
-    str = element[0];
-  }
-  // console.log("From iconWeather function: ", str);
-  return str;
-}
-
-// end icon weather functions ===============================================================================================
 
 // date functions ==============================================================================================================
 
