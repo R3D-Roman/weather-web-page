@@ -477,15 +477,12 @@ function iconWeather(url) {
 // end icon weather functions ===============================================================================================
 
 
-
 // generate html functions ========================================================================================================
 
 function generateHTML(data) {
   wetherInfoWrapper.innerHTML = "";
   const value = Object.entries(data);
   value.concat(data);
-  // console.log("Console.log: ", value[1][0]);
-  // for (let i = 0; i < value.length; i++) {}
   if (value[1][0] != "error") {
     icons.push(value[2][1].weather_icons);
     let div = document.createElement("div");
