@@ -494,11 +494,9 @@ function generateHTML(data) {
     <div class="temperature-header"></div>
                                           
           <div class="wrapper-weather-icons">
-          <picture>
-          <source srcset="${iconWeather(icons)}" type="image/webp">
           <img class="icons-weather" src="${iconWeather(icons)}" alt="weather icon">
-          </picture>
           </div>
+          
           <ul class="city-list">
           <li class="code-title">${weatherCode(value[2][1].weather_code)}</li>
           <li class="city-title"><i class="fas fa-city logo"></i>${
