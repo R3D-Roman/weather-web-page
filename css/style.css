@@ -101,6 +101,7 @@ main {
 
 ::placeholder {
   color: black;
+  vertical-align: middle;
 }
 
 .btn {
