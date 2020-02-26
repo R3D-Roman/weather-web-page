@@ -226,7 +226,7 @@ main {
 
 .icons-weather {
   display: block;
-  /* width: 100%; */
+  width: 100%;
   border: 2px solid white;
   border-radius: 10px;
 }
