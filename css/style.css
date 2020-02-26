@@ -218,17 +218,15 @@ main {
 }
 
 .wrapper-weather-icons {
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
-  width: 35px;
-  height: 35px;
+  align-items: center;
   z-index: 5;
 }
 
 .icons-weather {
   display: block;
-  width: 100%;
+  /* width: 100%; */
   border: 2px solid white;
   border-radius: 10px;
 }
