@@ -218,9 +218,11 @@ main {
 }
 
 .wrapper-weather-icons {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  width: 35px;
+  height: 35px;
   z-index: 5;
 }
 
