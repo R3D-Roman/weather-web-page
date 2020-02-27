@@ -14,7 +14,7 @@ textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='let
 anime.timeline({loop: false})
 .add({
   targets: '.ml9 .letter',
-  duration: 1000,
+  duration: 500,
 })
   .add({
     targets: '.ml9 .letter',
@@ -736,3 +736,10 @@ document.addEventListener("click", e => {
     });
   }
 });
+
+//  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+const alertMessage = document.querySelector(".message");
+
+setTimeout(() => {
+  alertMessage.style.display = "block";
+}, 3000);
