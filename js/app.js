@@ -6,11 +6,41 @@ const popUp = document.querySelector(".popup-btn");
 const autoCompleteDiv = document.querySelector(".auto-complete");
 const divAutocomplete = document.querySelector(".div-autocomplete");
 
+// header title animation
+
+var textWrapper = document.querySelector('.ml9 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+.add({
+  targets: '.ml9 .letter',
+  duration: 1000,
+})
+  .add({
+    targets: '.ml9 .letter',
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i+1)
+  }).add({
+    targets: '.ml9',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+  
+
+
+// end header title animation
+
+
+
 // api fetch functions ===================================================================================================
 
 function fetchData(city) {
   fetch(
-    `https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current?access_key=4b70f43105f5259724d51cac64829096&query=${city}`
+    `http://api.weatherstack.com/current?access_key=4b70f43105f5259724d51cac64829096&query=${city}`
   )
     .then(response => response.json())
     .then(data => generateHTML(data));
@@ -459,30 +489,14 @@ weatherCodes = [
   }
 ];
 
-
-
-
-// icon weather functions ========================================================================================================
-
-function iconWeather(url) {
-  let str = "";
-  for (let i = 0; i < url.length; i++) {
-    const element = url[i];
-    str = element[0];
-  }
-  // console.log("From iconWeather function: ", str);
-  return str;
-}
-
-// end icon weather functions ===============================================================================================
-
-
 // generate html functions ========================================================================================================
 
 function generateHTML(data) {
   wetherInfoWrapper.innerHTML = "";
   const value = Object.entries(data);
   value.concat(data);
+  // console.log("Console.log: ", value[1][0]);
+  // for (let i = 0; i < value.length; i++) {}
   if (value[1][0] != "error") {
     icons.push(value[2][1].weather_icons);
     let div = document.createElement("div");
@@ -493,10 +507,9 @@ function generateHTML(data) {
 
     <div class="temperature-header"></div>
                                           
-          <div class="wrapper-weather-icons">
-          <img class="icons-weather" src="${iconWeather(icons)}" alt="weather icon">
-          </div>
-          
+          <div class="wrapper-weather-icons"><img class="icons-weather" src="${iconWeather(
+            icons
+          )}"></div>
           <ul class="city-list">
           <li class="code-title">${weatherCode(value[2][1].weather_code)}</li>
           <li class="city-title"><i class="fas fa-city logo"></i>${
@@ -546,7 +559,19 @@ function generateHTML(data) {
 }
 // end generate html functions ====================================================================================================
 
+// icon weather functions ========================================================================================================
 
+function iconWeather(url) {
+  let str = "";
+  for (let i = 0; i < url.length; i++) {
+    const element = url[i];
+    str = element[0];
+  }
+  // console.log("From iconWeather function: ", str);
+  return str;
+}
+
+// end icon weather functions ===============================================================================================
 
 // date functions ==============================================================================================================
 

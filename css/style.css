@@ -11,6 +11,78 @@
   }
 }
 
+/* slide in top anim header */
+@keyframes swing-in-top-fwd {
+  0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+/* end slide in anim header */
+
+/* swing for footer */
+
+@keyframes swing-in-bottom-bck {
+  0% {
+    transform: rotateX(-70deg);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    transform-origin: bottom;
+    opacity: 1;
+  }
+}
+
+/* end swing for footer */
+
+/* bounce for input */
+@keyframes bounce-in-fwd {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: scale(0.84);
+            transform: scale(0.84);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  89% {
+    -webkit-transform: scale(1);
+  }
+}
+/* end bounce for input */
+
 * {
   box-sizing: border-box;
 }
@@ -22,13 +94,25 @@ body {
   font-family: "Roboto Slab", serif;
   font-size: 1.2rem;
   background: linear-gradient(to right, rgb(118, 204, 207) 0%, rgb(135, 251, 255) 30%, rgb(88, 187, 190) 100%);
+  background-image: url("../img/clouds-cold-mobile.jpg");
+  background-size: cover;
+  background-position: center center;
 }
 
 header,
 footer {
-  background: rgb(73, 220, 226);
+  /* background: rgb(73, 220, 226); */
+  background-color: inherit;
   text-align: center;
   padding: 1rem;
+}
+
+header {
+  animation: swing-in-top-fwd 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+footer {
+  animation: swing-in-bottom-bck 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
 hr {
@@ -81,6 +165,11 @@ main {
   position: relative;
 }
 
+.input-wrapper,
+.popup-btn {
+  animation: bounce-in-fwd 1.1s 2.5s both;
+}
+
 .input,
 .btn {
   margin-top: 0.3rem;
@@ -91,8 +180,8 @@ main {
 }
 
 .input {
-  background-color: rgb(237, 182, 246);
-  border: 1px solid rgb(189, 147, 102);
+  background-color: rgb(187, 186, 186);
+  border: 1px solid grey;
   color: black;
   margin-right: 0;
   text-align: center;
@@ -149,7 +238,7 @@ main {
 .how-to-search p {
   margin-bottom: 0;
   font-family: "Odibee Sans", cursive;
-  color: rgb(1, 177, 127);
+  color: rgb(2, 247, 177);
   cursor: pointer;
   font-size: 1.3rem;
 }
@@ -225,7 +314,7 @@ main {
 }
 
 .icons-weather {
-  display: block;
+  display: inline-block;
   width: 100%;
   border: 2px solid white;
   border-radius: 10px;
@@ -312,7 +401,7 @@ main {
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: rgb(237, 182, 246);
+  background-color: rgb(187, 186, 186);;
   padding-bottom: 0.8rem;
   border-radius: 0 0 5px 5px;
 }
@@ -320,15 +409,15 @@ main {
 .list-mutch {
   padding: 0.5rem;
   cursor: pointer;
-  background-color: rgb(237, 182, 246);
+  background-color: rgb(187, 186, 186);;
   transition: all 1s;
-  border-bottom: 2px solid rgb(160, 110, 57);
+  border-bottom: 2px solid rgb(216, 151, 82);
   font-weight: bold;
 }
 
 .list-mutch:hover,
 .list-mutch.selected {
-  background-color: rgb(219, 13, 255);
+  background-color: rgb(141, 138, 138);;
   color: white;
 }
 
@@ -341,6 +430,8 @@ main {
 
 footer p {
   margin-top: 0;
+  font-weight: bold;
+  color: rgb(43, 86, 100);
 }
 
 @media (min-width: 365px) {
@@ -354,6 +445,11 @@ footer p {
 }
 
 @media (min-width: 768px) {
+
+  body {
+    background-image: url("../img/clouds-cold-desktop.jpg");
+  }
+
   hr {
     display: none;
   }
@@ -425,4 +521,28 @@ footer p {
     letter-spacing: unset;
     text-align: start;
   }
+
+  /* header title animation */
+
+  .ml9 {
+    position: relative;
+  }
+
+  .ml9 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.1em;
+    padding-left: 0.5em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+
+  .ml9 .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  /* end header title animation */
 }
