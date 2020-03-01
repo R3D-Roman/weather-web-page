@@ -396,8 +396,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 64px;
-  height: 64px;
+  width: 82px;
+  height: 82px;
   z-index: 5;
 }
 
@@ -406,7 +406,7 @@ main {
   width: 100%;
   border: 2px solid white;
   border-radius: 10px;
-  background-color: purple;
+  background-color: rgb(33, 49, 131);
 }
 
 .temp {
