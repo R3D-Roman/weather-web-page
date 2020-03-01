@@ -6,41 +6,11 @@ const popUp = document.querySelector(".popup-btn");
 const autoCompleteDiv = document.querySelector(".auto-complete");
 const divAutocomplete = document.querySelector(".div-autocomplete");
 
-// header title animation
-
-var textWrapper = document.querySelector('.ml9 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({loop: false})
-.add({
-  targets: '.ml9 .letter',
-  duration: 1000,
-})
-  .add({
-    targets: '.ml9 .letter',
-    scale: [0, 1],
-    duration: 1500,
-    elasticity: 600,
-    delay: (el, i) => 45 * (i+1)
-  }).add({
-    targets: '.ml9',
-    opacity: 1,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-  
-
-
-// end header title animation
-
-
-
 // api fetch functions ===================================================================================================
 
 function fetchData(city) {
   fetch(
-    `http://api.weatherstack.com/current?access_key=4b70f43105f5259724d51cac64829096&query=${city}`
+    `https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current?access_key=4b70f43105f5259724d51cac64829096&query=${city}`
   )
     .then(response => response.json())
     .then(data => generateHTML(data));
@@ -643,6 +613,52 @@ const resetCursor = () => {
 // end cursor arrow for autocomplete functions =====================================================================================
 
 // eventListeners
+
+const btnClose = document.querySelector(".btn-close");
+const backdrop = document.querySelector(".backdrop");
+const modalMessage = document.querySelector(".modal");
+const wrapperAll = document.querySelector(".wrapper");
+const header = document.querySelector("header");
+const headerH1 = document.querySelector("header h1");
+const footer = document.querySelector("footer");
+
+btnClose.addEventListener("click", e => {
+  backdrop.style.display = "none";
+  modalMessage.style.display = "none";
+  header.style.display = "block";
+  wrapperAll.style.display = "block";
+  footer.style.display = "block";
+  // header title animation
+
+  var textWrapper = document.querySelector(".ml9 .letters");
+  textWrapper.innerHTML = textWrapper.textContent.replace(
+    /\S/g,
+    "<span class='letter'>$&</span>"
+  );
+
+  anime
+    .timeline({ loop: false })
+    .add({
+      targets: ".ml9 .letter",
+      duration: 500
+    })
+    .add({
+      targets: ".ml9 .letter",
+      scale: [0, 1],
+      duration: 1500,
+      elasticity: 600,
+      delay: (el, i) => 45 * (i + 1)
+    })
+    .add({
+      targets: ".ml9",
+      opacity: 1,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+
+  // end header title animation
+});
 
 input.addEventListener("keyup", () => {
   autoComplete(listOfCapitals);
