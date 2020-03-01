@@ -736,10 +736,3 @@ document.addEventListener("click", e => {
     });
   }
 });
-
-//  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-const alertMessage = document.querySelector(".message");
-
-setTimeout(() => {
-  alertMessage.style.display = "block";
-}, 3000);
