@@ -103,9 +103,6 @@
 * {
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   display: flex;
@@ -159,6 +156,65 @@ ul {
 li {
   margin-top: 0.5rem;
 }
+
+/* poup notification */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.modal {
+  width: 95%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  margin-top: 5rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 2px solid black;
+  border-radius: 5px;
+  z-index: 1001;
+}
+
+.modal h2 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.modal-btn {
+  padding: .5rem;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 5;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  transition: all .8s;
+  cursor: pointer;
+}
+
+.modal-btn:hover{
+  background-color: rgba(0, 0, 0, .7);
+}
+
+header,
+.wrapper,
+footer {
+  display: none;
+}
+
+/* end poup notification */
 
 /* header title */
 
@@ -481,6 +537,13 @@ footer p {
   hr {
     display: none;
   }
+
+
+  .modal {
+    width: 60%;
+  }
+
+
   .wrapper {
     width: 60%;
   }
