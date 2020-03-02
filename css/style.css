@@ -110,16 +110,7 @@ body {
   min-height: 100vh;
   font-family: "Roboto Slab", serif;
   font-size: 1.2rem;
-  background: linear-gradient(
-    to right,
-    rgb(118, 204, 207) 0%,
-    rgb(135, 251, 255) 30%,
-    rgb(88, 187, 190) 100%
-  );
-  background-image: url("../img/clouds-cold-mobile.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: linear-gradient(-18deg,#f0f0f0,#f0f0f0,rgba(255,0,0,0) .1vh),linear-gradient(10deg,#f0f0f0,#f0f0f0 -.02056vh,rgba(255,0,0,0) .07944vh),linear-gradient(-32deg,#9337d8,#1fc2c8);
 }
 
 header,
@@ -533,10 +524,6 @@ footer p {
 }
 
 @media (min-width: 768px) {
-  body {
-    background-image: url("../img/clouds-cold-desktop.jpg");
-  }
-
   hr {
     display: none;
   }
