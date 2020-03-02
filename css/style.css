@@ -111,15 +111,18 @@ body {
   font-family: "Roboto Slab", serif;
   font-size: 1.2rem;
   background: linear-gradient(
-    to right,
-    rgb(118, 204, 207) 0%,
-    rgb(135, 251, 255) 30%,
-    rgb(88, 187, 190) 100%
-  );
-  background-image: url("../img/clouds-cold-mobile.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+      -18deg,
+      #f0f0f0,
+      #f0f0f0,
+      rgba(255, 0, 0, 0) 0.1vh
+    ),
+    linear-gradient(
+      10deg,
+      #f0f0f0,
+      #f0f0f0 -0.02056vh,
+      rgba(255, 0, 0, 0) 0.07944vh
+    ),
+    linear-gradient(-32deg, #9337d8, #1fc2c8);
 }
 
 header,
@@ -193,19 +196,19 @@ li {
 }
 
 .modal-btn {
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: black;
   border: 1px solid black;
   border-radius: 5;
   color: white;
   font-weight: bold;
   outline: none;
-  transition: all .8s;
+  transition: all 0.8s;
   cursor: pointer;
 }
 
-.modal-btn:hover{
-  background-color: rgba(0, 0, 0, .7);
+.modal-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 header,
@@ -530,19 +533,13 @@ footer p {
 }
 
 @media (min-width: 768px) {
-  body {
-    background-image: url("../img/clouds-cold-desktop.jpg");
-  }
-
   hr {
     display: none;
   }
 
-
   .modal {
     width: 60%;
   }
-
 
   .wrapper {
     width: 60%;
