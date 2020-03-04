@@ -110,7 +110,19 @@ body {
   min-height: 100vh;
   font-family: "Roboto Slab", serif;
   font-size: 1.2rem;
-  background: linear-gradient(-18deg,#f0f0f0,#f0f0f0,rgba(255,0,0,0) .1vh),linear-gradient(10deg,#f0f0f0,#f0f0f0 -.02056vh,rgba(255,0,0,0) .07944vh),linear-gradient(-32deg,#9337d8,#1fc2c8);
+  background: linear-gradient(
+      -18deg,
+      #f0f0f0,
+      #f0f0f0,
+      rgba(255, 0, 0, 0) 0.1vh
+    ),
+    linear-gradient(
+      10deg,
+      #f0f0f0,
+      #f0f0f0 -0.02056vh,
+      rgba(255, 0, 0, 0) 0.07944vh
+    ),
+    linear-gradient(-32deg, #9337d8, #1fc2c8);
 }
 
 header,
@@ -249,18 +261,22 @@ main {
 .btn {
   margin-top: 0.3rem;
   padding: 0.3rem 0.8rem;
-  border-radius: 5px;
+  border-radius: 0 20px 0 20px;
   box-shadow: 3px -2px 5px rgb(0, 0, 0);
   outline: none;
 }
 
 .input {
   background-color: rgb(187, 186, 186);
-  border: 1px solid grey;
+  border-bottom: 5px solid rgb(245, 191, 132);
   color: black;
   margin-right: 0;
   text-align: center;
   width: 100%;
+}
+
+.input:focus {
+  background-color: white;
 }
 
 ::placeholder {
@@ -335,6 +351,14 @@ main {
   animation: slide-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+#welcome-div {
+  animation: slide-in-left 0.8s 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.icon-welcome {
+  padding: 0.2rem;
+}
+
 .temperature {
   display: flex;
   flex-direction: column;
@@ -387,8 +411,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 82px;
-  height: 82px;
   z-index: 5;
 }
 
@@ -397,7 +419,6 @@ main {
   width: 100%;
   border: 2px solid white;
   border-radius: 10px;
-  background-color: rgb(33, 49, 131);
 }
 
 .temp {
@@ -625,3 +646,4 @@ footer p {
 
   /* end header title animation */
 }
+
