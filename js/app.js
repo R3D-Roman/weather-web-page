@@ -10,7 +10,7 @@ const divAutocomplete = document.querySelector(".div-autocomplete");
 
 function fetchData(city) {
   fetch(
-    `http://api.weatherstack.com/current?access_key=4b70f43105f5259724d51cac64829096&query=${city}`
+    `https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current?access_key=4b70f43105f5259724d51cac64829096&query=${city}`
   )
     .then(response => response.json())
     .then(data => generateHTML(data));
