@@ -19,16 +19,17 @@
   <div class="backdrop"></div>
   <div class="modal">
     <h2>Api Information</h2>
-    <p>Hi, guys! I have created a website using API requests, but there is one issue. When the weather icon is being loaded, not all the icons are displayed on iOS. The case is, that some icons are in WebP format.
+    <p>Hi, guys! I have created a website using API requests, but there is one issue. When the weather icon is being
+      loaded, not all the icons are displayed on iOS. The case is, that some icons are in WebP format.
       I just wanted to explain the reason for this issue. Thank you and enjoy my app.</p>
     <button class="modal-btn btn-close">Close</button>
   </div>
   <header>
-    <h1 class="title ml9"> 
+    <h1 class="title ml9">
       <span class="text-wrapper">
         <span class="letters">Weather Search Web Page</span>
       </span>
-     </h1>
+    </h1>
   </header>
 
   <main>
@@ -46,7 +47,58 @@
           <button class="btn">search</button>
         </div>
 
-        <div class="wether-info-wrapper"></div>
+        <div class="wether-info-wrapper">
+
+          <div id="welcome-div" class="info-card">
+
+            <div class="temperature">
+
+              <div class="temperature-header"></div>
+
+              <div class="wrapper-weather-icons"><img class="icons-weather icon-welcome" src="img/mars-img.png"></div>
+              <ul class="city-list">
+                <li class="country-title"><i class="fas fa-globe-asia logo"></i>Mars</li>
+              </ul>
+              <hr>
+              <div class="col">
+                <h3 class="list-button">Detailed Information</h3>
+                <ul class="temp-wrap list-show">
+                  <li class="title-space"><i class="fas fa-temperature-low logo"> </i><span class="font-title">
+                      FeelsLike: </span></li>
+                  <li class="temp">-170&#8451;</li>
+                  <li class="title-space"><i class="fas fa-cloud logo"></i><span class="font-title"> Cloudcover: </span>
+                  </li>
+                  <li class="temp">70%</li>
+                  <li class="title-space"><i class="fas fa-tint logo"></i><span class="font-title"> Precipitation:
+                    </span> </li>
+                  <li class="temp">0%</li>
+                </ul>
+                <div class="wall"></div>
+                <ul class="temp-wrap order">
+                  <li class="temp-title temp"><i class="fas fa-temperature-low logo-temp logo"></i><span
+                      class="font-title"> Temp: </span></li>
+                  <li class="temp-text temp">-125&#8451;</li>
+                  <li class="title-time font"><i class="far fa-clock logo"></i><span class="font-title"> LocalTime:
+                    </span>
+                  14:37</li>
+                </ul>
+                <hr class="order">
+                <div class="wall"></div>
+                <ul class="temp-wrap list-show">
+                  <li class="title-space"><i class="fas fa-wind logo"></i><span class="font-title"> Wind Speed: </span>
+                  </li>
+                  <li class="temp"> 50km/h</li>
+                  <li class="title-space"><i class="fas fa-smog logo"></i><span class="font-title"> Visibility: </span>
+                  </li>
+                  <li class="temp"> 5km</li>
+                  <li class="title-space"><i class="fab fa-cloudscale logo"></i><span class="font-title"> Atm Pressure:
+                    </span> </li>
+                  <li class="temp"> 1500mbar</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
 

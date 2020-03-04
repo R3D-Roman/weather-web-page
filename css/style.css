@@ -261,18 +261,22 @@ main {
 .btn {
   margin-top: 0.3rem;
   padding: 0.3rem 0.8rem;
-  border-radius: 5px;
+  border-radius: 0 20px 0 20px;
   box-shadow: 3px -2px 5px rgb(0, 0, 0);
   outline: none;
 }
 
 .input {
   background-color: rgb(187, 186, 186);
-  border: 1px solid grey;
+  border-bottom: 5px solid rgb(245, 191, 132);
   color: black;
   margin-right: 0;
   text-align: center;
   width: 100%;
+}
+
+.input:focus {
+  background-color: white;
 }
 
 ::placeholder {
@@ -345,6 +349,14 @@ main {
   margin-top: 1.4rem;
   background-color: rgba(255, 255, 255, 0.7);
   animation: slide-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+#welcome-div {
+  animation: slide-in-left 0.8s 3.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.icon-welcome {
+  padding: 0.2rem;
 }
 
 .temperature {
