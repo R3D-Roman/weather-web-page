@@ -2,7 +2,7 @@ const staticCacheName = "site-static-v1";
 const dynamicCacheName = "site-dynamic-v1";
 const assets = [
   "/",
-  "index.html",
+  "r3d-roman.github.io/weather-web-page/index.html",
   "js/app.js",
   "js/pwa.js",
   "css/style.css",
