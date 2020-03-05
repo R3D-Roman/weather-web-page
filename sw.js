@@ -4,7 +4,6 @@ const assets = [
   "/",
   "index.html",
   "js/app.js",
-  "js/pwa.js",
   "css/style.css",
   "css/normalize.css",
   "font-awesome/all.min.css",
