@@ -1,7 +1,7 @@
 {
     "name": "Weather Search Web Page",
     "short_name": "WeatherWebPage",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#7F4ED5",
     "theme_color": "#975DFA",
