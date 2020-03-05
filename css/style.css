@@ -163,6 +163,7 @@ li {
 /* poup notification */
 
 .backdrop {
+  visibility: hidden;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -173,6 +174,7 @@ li {
 }
 
 .modal {
+  visibility: hidden;
   width: 95%;
   max-width: 1200px;
   display: flex;

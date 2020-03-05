@@ -621,6 +621,50 @@ const wrapperAll = document.querySelector(".wrapper");
 const header = document.querySelector("header");
 const headerH1 = document.querySelector("header h1");
 const footer = document.querySelector("footer");
+const disp = localStorage.getItem("display");
+
+window.addEventListener("load", e => {
+  if (localStorage.getItem("display") === null) {
+    backdrop.style.visibility = "visible";
+    modalMessage.style.visibility = "visible";
+  }
+
+  else if (localStorage.getItem("display") != null) {
+    backdrop.style.display = disp;
+    modalMessage.style.display = disp;
+    header.style.display = "block";
+    wrapperAll.style.display = "block";
+    footer.style.display = "block";
+    // header title animation
+
+    var textWrapper = document.querySelector(".ml9 .letters");
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+      /\S/g,
+      "<span class='letter'>$&</span>"
+    );
+
+    anime
+      .timeline({ loop: false })
+      .add({
+        targets: ".ml9 .letter",
+        duration: 500
+      })
+      .add({
+        targets: ".ml9 .letter",
+        scale: [0, 1],
+        duration: 1500,
+        elasticity: 600,
+        delay: (el, i) => 45 * (i + 1)
+      })
+      .add({
+        targets: ".ml9",
+        opacity: 1,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+      });
+  }
+});
 
 btnClose.addEventListener("click", e => {
   backdrop.style.display = "none";
@@ -658,6 +702,8 @@ btnClose.addEventListener("click", e => {
     });
 
   // end header title animation
+
+  localStorage.setItem("display", "none");
 });
 
 input.addEventListener("keyup", () => {
