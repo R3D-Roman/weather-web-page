@@ -823,10 +823,14 @@ window.addEventListener("load", e => {
   function handleNetworkChange(e) {
     if (navigator.onLine) {
       modalOffline.style.visibility = "hidden";
+      closeOfflineBtn.style.visibility = "hidden";
       modalOnline.style.visibility = "visible";
+      closeOnlineBtn.style.visibility = "visible";
     } else {
       modalOffline.style.visibility = "visible";
+      closeOfflineBtn.style.visibility = "visible";
       modalOnline.style.visibility = "hidden";
+      closeOnlineBtn.style.visibility = "hidden";
     }
   }
   window.addEventListener("online", handleNetworkChange);
