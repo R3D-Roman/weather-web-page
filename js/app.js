@@ -631,6 +631,7 @@ const headerH1 = document.querySelector("header h1");
 const footer = document.querySelector("footer");
 const disp = localStorage.getItem("display");
 
+// local storage backdrop
 window.addEventListener("load", e => {
   if (localStorage.getItem("display") === null) {
     backdrop.style.visibility = "visible";
@@ -674,6 +675,8 @@ window.addEventListener("load", e => {
   }
 });
 
+
+// close backdrop and add localStorage
 btnClose.addEventListener("click", e => {
   backdrop.style.display = "none";
   modalMessage.style.display = "none";
@@ -714,6 +717,7 @@ btnClose.addEventListener("click", e => {
   localStorage.setItem("display", "none");
 });
 
+// input events autocomplete
 input.addEventListener("keyup", () => {
   btn.disabled = false;
   autoComplete(listOfCapitals);
@@ -780,6 +784,7 @@ document.addEventListener("click", e => {
   }
 });
 
+// search for city weather
 btn.addEventListener("click", e => {
   let inputValue = input.value.toLowerCase();
   fetchData(inputValue);
@@ -787,6 +792,7 @@ btn.addEventListener("click", e => {
   btn.disabled = true;
 });
 
+// popup how to search
 popUp.addEventListener("click", e => {
   togglePopup.classList.toggle("show-popup");
 });
@@ -800,6 +806,7 @@ document.addEventListener("click", e => {
   }
 });
 
+// popup more details on mobile version
 document.addEventListener("click", e => {
   if (e.target.classList == "list-button") {
     const listShow = document.querySelectorAll(".list-show");
@@ -809,6 +816,7 @@ document.addEventListener("click", e => {
   }
 });
 
+// online offline modal
 const modalOffline = document.querySelector("#modal-offline");
 const modalOnline = document.querySelector("#modal-online");
 const closeOfflineBtn = document.querySelector(".btn-close-offline");
