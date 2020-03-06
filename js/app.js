@@ -639,6 +639,7 @@ window.addEventListener("load", e => {
   } else if (localStorage.getItem("display") != null) {
     backdrop.style.display = disp;
     modalMessage.style.display = disp;
+    btnClose.style.display = disp;
     header.style.display = "block";
     wrapperAll.style.display = "block";
     footer.style.display = "block";
