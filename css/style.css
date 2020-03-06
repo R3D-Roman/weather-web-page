@@ -160,6 +160,33 @@ li {
   margin-top: 0.5rem;
 }
 
+/* erroe div */
+.err-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.err-div h3 {
+  text-transform: uppercase;
+  color: red;
+}
+
+.err-div h3,
+.err-div p {
+  text-align: center;
+  margin: 0;
+}
+.err-div p {
+  margin-top: .5rem;
+  font-weight: bold;
+  color: rgb(6, 204, 6);
+}
+
+/* end error div */
+
 /* poup notification */
 
 .backdrop {
@@ -293,6 +320,13 @@ main {
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   cursor: pointer;
   transition: 1s all;
+}
+
+.btn:disabled,
+.btn:disabled:hover {
+  background-color: rgb(131, 101, 70);
+  color: rgb(112, 220, 189);
+  cursor: default;
 }
 
 .btn:hover {

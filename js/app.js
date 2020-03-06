@@ -524,7 +524,15 @@ function generateHTML(data) {
        </div>
     </div> `;
   } else {
-    return;
+    return wetherInfoWrapper.innerHTML = `
+    <div class="info-card">
+    <div class="err-div">
+    <h3>You have typed incorrect city name!</h3>
+    <p>Please Try Again</p>
+      </div>
+    </div>
+  </div>
+    `;
   }
 }
 // end generate html functions ====================================================================================================
@@ -707,6 +715,7 @@ btnClose.addEventListener("click", e => {
 });
 
 input.addEventListener("keyup", () => {
+  btn.disabled = false;
   autoComplete(listOfCapitals);
 });
 
@@ -775,6 +784,7 @@ btn.addEventListener("click", e => {
   let inputValue = input.value.toLowerCase();
   fetchData(inputValue);
   input.value = "";
+  btn.disabled = true;
 });
 
 popUp.addEventListener("click", e => {
