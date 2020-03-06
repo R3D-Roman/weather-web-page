@@ -224,7 +224,9 @@ li {
   text-transform: uppercase;
 }
 
-.modal-btn {
+.modal-btn,
+.modal-offline-btn,
+.modal-online-btn {
   padding: 0.5rem;
   background-color: black;
   border: 1px solid black;
@@ -232,12 +234,7 @@ li {
   color: white;
   font-weight: bold;
   outline: none;
-  transition: all 0.8s;
   cursor: pointer;
-}
-
-.modal-btn:hover {
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 header,
@@ -274,17 +271,6 @@ footer {
   text-align: center;
 }
 
-.modal-offline-btn,
-.modal-online-btn {
-  padding: 0.5rem;
-  background-color: black;
-  border: 1px solid black;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-  outline: none;
-  cursor: pointer;
-}
 
 /* end poup notification */
 
