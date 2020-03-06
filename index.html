@@ -9,6 +9,7 @@
   <link rel="icon" href="icon/favicon-16x16.png" sizes="16x16">
   <link rel="icon" href="icon/favicon-32x32.png" sizes="32x32">
   <link rel="icon" href="icon/favicon-96x96.png" sizes="96x96">
+  <link rel="canonical" href="https://r3d-roman.github.io/weather-web-page/" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="font-awesome/all.min.css" />
@@ -23,12 +24,22 @@
   <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
-  <meta name="apple-mobile-web-app-status-bar" content="#7F4ED5">
-  <meta name="theme-color" content="#975DFA">
+  <meta name="apple-mobile-web-app-status-bar" content="#7f4ed5">
+  <meta name="theme-color" content="#975dfa">
 
 </head>
 
 <body>
+
+  <div id="modal-offline">
+    <h2>You are offline</h2>
+    <button class="modal-offline-btn btn-close-offline">Close</button>
+  </div>
+  <div id="modal-online">
+    <h2>You are online</h2>
+    <button class="modal-online-btn btn-close-online">Close</button>
+  </div>
+
   <div class="backdrop"></div>
   <div class="modal">
     <h2>Api Information</h2>
@@ -125,7 +136,8 @@
   </footer>
 
 
-<script>
+
+  <script>
     if('serviceWorker' in navigator){
       navigator.serviceWorker.register('/weather-web-page/sw.js', {scope: '/weather-web-page/'})
         .then(reg => console.log('service worker registered', reg))

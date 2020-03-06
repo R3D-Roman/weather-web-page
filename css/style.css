@@ -160,6 +160,33 @@ li {
   margin-top: 0.5rem;
 }
 
+/* erroe div */
+.err-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.err-div h3 {
+  text-transform: uppercase;
+  color: red;
+}
+
+.err-div h3,
+.err-div p {
+  text-align: center;
+  margin: 0;
+}
+.err-div p {
+  margin-top: .5rem;
+  font-weight: bold;
+  color: rgb(6, 204, 6);
+}
+
+/* end error div */
+
 /* poup notification */
 
 .backdrop {
@@ -201,7 +228,7 @@ li {
   padding: 0.5rem;
   background-color: black;
   border: 1px solid black;
-  border-radius: 5;
+  border-radius: 5px;
   color: white;
   font-weight: bold;
   outline: none;
@@ -217,6 +244,46 @@ header,
 .wrapper,
 footer {
   display: none;
+}
+
+#modal-offline,
+#modal-online {
+  visibility: hidden;
+  width: 75%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: .6rem;
+  background: rgb(226, 225, 225);
+  margin-top: 5rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 2px solid black;
+  border-radius: 20px;
+  z-index: 1001;
+  color: red;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+#modal-offline h2,
+#modal-online h2 {
+  text-align: center;
+}
+
+.modal-offline-btn,
+.modal-online-btn {
+  padding: 0.5rem;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
 }
 
 /* end poup notification */
@@ -293,6 +360,13 @@ main {
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   cursor: pointer;
   transition: 1s all;
+}
+
+.btn:disabled,
+.btn:disabled:hover {
+  background-color: rgb(131, 101, 70);
+  color: rgb(112, 220, 189);
+  cursor: default;
 }
 
 .btn:hover {
@@ -647,4 +721,9 @@ footer p {
   }
 
   /* end header title animation */
+
+  #modal-offline,
+  #modal-online  {
+    width: 40%;
+  }
 }
