@@ -232,7 +232,7 @@ li {
   color: white;
   font-weight: bold;
   outline: none;
-  transition: all 0.8s;
+  /* transition: all 0.8s; */
   cursor: pointer;
 }
 
