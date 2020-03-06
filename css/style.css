@@ -236,9 +236,9 @@ li {
   cursor: pointer;
 }
 
-.modal-btn:hover {
+/* .modal-btn:hover {
   background-color: rgba(0, 0, 0, 0.7);
-}
+} */
 
 header,
 .wrapper,
