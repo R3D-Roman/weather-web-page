@@ -3,8 +3,8 @@
     "short_name": "WeatherWebPage",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "#7F4ED5",
-    "theme_color": "#975DFA",
+    "background_color": "#7f4dd5",
+    "theme_color": "#975dfa",
     "orientation": "portrait-primary",
     "icons": [
         {
