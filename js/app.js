@@ -210,7 +210,7 @@ const listOfCapitals = [
   "Kiev",
   "Abu Dhabi",
   "London",
-  "Washington D.C.",
+  "Washington DC",
   "Montevideo",
   "Tashkent",
   "Port-Vila",
