@@ -78,6 +78,24 @@ self.addEventListener("fetch", evt => {
         return (
           cacheRes ||
           fetch(evt.request).then(fetchRes => {
+            return caches.open(staticCacheName).then(cache => {
+              cache.put(evt.request.url, fetchRes.clone());
+              // check cached items size
+              limitCacheSize(staticCacheName, 35);
+              return fetchRes;
+            });
+          })
+        );
+      })
+  );
+
+  evt.respondWith(
+    caches
+      .match(evt.request)
+      .then(cacheRes => {
+        return (
+          cacheRes ||
+          fetch(evt.request).then(fetchRes => {
             return caches.open(dynamicCacheName).then(cache => {
               cache.put(evt.request.url, fetchRes.clone());
               // check cached items size
