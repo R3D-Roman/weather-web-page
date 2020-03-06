@@ -161,7 +161,7 @@ li {
 }
 
 /* erroe div */
-.err-div{
+.err-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -180,7 +180,7 @@ li {
   margin: 0;
 }
 .err-div p {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   font-weight: bold;
   color: rgb(6, 204, 6);
 }
@@ -255,7 +255,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: .6rem;
+  padding: 0.6rem;
   background: rgb(226, 225, 225);
   margin-top: 5rem;
   position: absolute;
@@ -723,7 +723,7 @@ footer p {
   /* end header title animation */
 
   #modal-offline,
-  #modal-online  {
+  #modal-online {
     width: 40%;
   }
 }
