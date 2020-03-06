@@ -808,3 +808,30 @@ document.addEventListener("click", e => {
     });
   }
 });
+
+const modalOffline = document.querySelector("#modal-offline");
+const modalOnline = document.querySelector("#modal-online");
+const closeOfflineBtn = document.querySelector(".btn-close-offline");
+const closeOnlineBtn = document.querySelector(".btn-close-online");
+
+window.addEventListener("load", (e) => {
+  function handleNetworkChange(e) {
+    if (navigator.onLine) {
+      modalOffline.style.visibility = "hidden";
+      modalOnline.style.visibility = "visible";
+    } else {
+      modalOffline.style.visibility = "visible";
+      modalOnline.style.visibility = "hidden";
+    }
+  }
+  window.addEventListener("online", handleNetworkChange);
+  window.addEventListener("offline", handleNetworkChange);
+});
+
+closeOfflineBtn.addEventListener("click", (e) => {
+  modalOffline.style.visibility = "hidden";
+});
+
+closeOnlineBtn.addEventListener("click", (e) => {
+  modalOnline.style.visibility = "hidden";
+});
