@@ -9,7 +9,7 @@ const assets = [
   "/weather-web-page/font-awesome/all.min.css",
   "/weather-web-page/font-awesome/all.min.js",
   "/weather-web-page/img/mars-img.png",
-  "/weather-web-page/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
   "/weather-web-page/webfonts/fa-brands-400.eot",
   "/weather-web-page/webfonts/fa-brands-400.svg",
   "/weather-web-page/webfonts/fa-brands-400.ttf",
