@@ -524,7 +524,7 @@ function generateHTML(data) {
        </div>
     </div> `;
   } else {
-    return wetherInfoWrapper.innerHTML = `
+    return (wetherInfoWrapper.innerHTML = `
     <div class="info-card">
     <div class="err-div">
     <h3>You have typed incorrect city name!</h3>
@@ -532,7 +532,7 @@ function generateHTML(data) {
       </div>
     </div>
   </div>
-    `;
+    `);
   }
 }
 // end generate html functions ====================================================================================================
@@ -636,9 +636,7 @@ window.addEventListener("load", e => {
   if (localStorage.getItem("display") === null) {
     backdrop.style.visibility = "visible";
     modalMessage.style.visibility = "visible";
-  }
-
-  else if (localStorage.getItem("display") != null) {
+  } else if (localStorage.getItem("display") != null) {
     backdrop.style.display = disp;
     modalMessage.style.display = disp;
     header.style.display = "block";
@@ -674,7 +672,6 @@ window.addEventListener("load", e => {
       });
   }
 });
-
 
 // close backdrop and add localStorage
 btnClose.addEventListener("click", e => {
@@ -822,7 +819,7 @@ const modalOnline = document.querySelector("#modal-online");
 const closeOfflineBtn = document.querySelector(".btn-close-offline");
 const closeOnlineBtn = document.querySelector(".btn-close-online");
 
-window.addEventListener("load", (e) => {
+window.addEventListener("load", e => {
   function handleNetworkChange(e) {
     if (navigator.onLine) {
       modalOffline.style.visibility = "hidden";
@@ -836,10 +833,10 @@ window.addEventListener("load", (e) => {
   window.addEventListener("offline", handleNetworkChange);
 });
 
-closeOfflineBtn.addEventListener("click", (e) => {
+closeOfflineBtn.addEventListener("click", e => {
   modalOffline.style.visibility = "hidden";
 });
 
-closeOnlineBtn.addEventListener("click", (e) => {
+closeOnlineBtn.addEventListener("click", e => {
   modalOnline.style.visibility = "hidden";
 });
