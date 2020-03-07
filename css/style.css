@@ -271,7 +271,6 @@ footer {
   text-align: center;
 }
 
-
 /* end poup notification */
 
 /* header title */
@@ -470,6 +469,9 @@ main {
 }
 
 .wrapper-weather-icons {
+  width: 82px;
+  height: 82px;
+  background-color: rgb(0, 0, 50);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -480,6 +482,9 @@ main {
   display: inline-block;
   width: 100%;
   border: 2px solid white;
+}
+.wrapper-weather-icons,
+.icons-weather {
   border-radius: 10px;
 }
 

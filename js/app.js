@@ -479,7 +479,7 @@ function generateHTML(data) {
                                           
           <div class="wrapper-weather-icons"><img class="icons-weather" src="${iconWeather(
             icons
-          )}"></div>
+          )}" alt="Weather Icons"></div>
           <ul class="city-list">
           <li class="code-title">${weatherCode(value[2][1].weather_code)}</li>
           <li class="city-title"><i class="fas fa-city logo"></i>${
