@@ -8,14 +8,14 @@
     "orientation": "portrait-primary",
     "icons": [
         {
-            "src": "icon/favicon-16x16.png",
+            "src": "icon/android-icon-36x36.png.png",
             "type": "image/png",
-            "sizes": "16x16"
+            "sizes": "36x36"
         },
         {
-            "src": "icon/favicon-32x32.png",
+            "src": "icon/android-icon-48x48.png",
             "type": "image/png",
-            "sizes": "32x32"
+            "sizes": "48x48"
         },
         {
             "src": "icon/android-icon-72x72.png",
