@@ -28,17 +28,6 @@ const assets = [
   "/weather-web-page/webfonts/fa-solid-900.ttf",
   "/weather-web-page/webfonts/fa-solid-900.woff",
   "/weather-web-page/webfonts/fa-solid-900.woff2"
-  // "/weather-web-page/splashscreens/iphone5_splash.png",
-  // "/weather-web-page/splashscreens/iphone6_splash.png",
-  // "/weather-web-page/splashscreens/iphoneplus_splash.png",
-  // "/weather-web-page/splashscreens/iphonex_splash.png",
-  // "/weather-web-page/splashscreens/iphonexr_splash.png",
-  // "/weather-web-page/splashscreens/iphonexsmax_splash.png",
-  // "/weather-web-page/splashscreens/ipad_splash.png",
-  // "/weather-web-page/splashscreens/ipadpro1_splash.png",
-  // "/weather-web-page/splashscreens/ipadpro3_splash.png",
-  // "/weather-web-page/splashscreens/ipadpro2_splash.png",
-  
 ];
 
 // cache size limits function
