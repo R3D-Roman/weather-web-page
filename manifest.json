@@ -1,7 +1,7 @@
 {
     "name": "Weather Search Web Page",
     "short_name": "WeatherWebPage",
-    "start_url": "/index.html",
+    "start_url": "https://r3d-roman.github.io/weather-web-page/index.html",
     "display": "standalone",
     "background_color": "#7f4dd5",
     "theme_color": "#975dfa",
