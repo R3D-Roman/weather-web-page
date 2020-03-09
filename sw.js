@@ -1,5 +1,12 @@
 const staticCacheName = "site-static-v2";
 const dynamicCacheName = "site-dynamic-v2";
+
+/* This pathes is for weather page of github pages! for local usage just update "assets" for:
+"index.html",
+"js/app.js",
+"css/style.css"
+and so on
+*/ 
 const assets = [
   "/weather-web-page/",
   "/weather-web-page/index.html",
