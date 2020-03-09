@@ -88,5 +88,8 @@ self.addEventListener("fetch", evt => {
         })
       );
     })
+    .catch(() => {
+      console.log("Offline: ", caches);
+    })
   );
 });
