@@ -1,33 +1,33 @@
-const staticCacheName = "site-static-v1";
-const dynamicCacheName = "site-dynamic-v1";
+const staticCacheName = "site-static-v2";
+const dynamicCacheName = "site-dynamic-v2";
 const assets = [
-  "/",
-  "index.html",
-  "js/app.js",
-  "css/style.css",
-  "css/normalize.css",
-  "font-awesome/all.min.css",
-  "font-awesome/all.min.js",
-  "img/mars-img.png",
-  "icon/favicon-16x16.png",
-  "icon/favicon-32x32.png",
-  "icon/favicon-96x96.png",
+  "/weather-web-page/",
+  "/weather-web-page/index.html",
+  "/weather-web-page/js/app.js",
+  "/weather-web-page/css/style.css",
+  "/weather-web-page/css/normalize.css",
+  "/weather-web-page/font-awesome/all.min.css",
+  "/weather-web-page/font-awesome/all.min.js",
+  "/weather-web-page/img/mars-img.png",
+  "/weather-web-page/icon/favicon-16x16.png",
+  "/weather-web-page/icon/favicon-32x32.png",
+  "/weather-web-page/icon/favicon-96x96.png",
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
-  "webfonts/fa-brands-400.eot",
-  "webfonts/fa-brands-400.svg",
-  "webfonts/fa-brands-400.ttf",
-  "webfonts/fa-brands-400.woff",
-  "webfonts/fa-brands-400.woff2",
-  "webfonts/fa-regular-400.eot",
-  "webfonts/fa-regular-400.svg",
-  "webfonts/fa-regular-400.ttf",
-  "webfonts/fa-regular-400.woff",
-  "webfonts/fa-regular-400.woff2",
-  "webfonts/fa-solid-900.eot",
-  "webfonts/fa-solid-900.svg",
-  "webfonts/fa-solid-900.ttf",
-  "webfonts/fa-solid-900.woff",
-  "webfonts/fa-solid-900.woff2"   
+  "/weather-web-page/webfonts/fa-brands-400.eot",
+  "/weather-web-page/webfonts/fa-brands-400.svg",
+  "/weather-web-page/webfonts/fa-brands-400.ttf",
+  "/weather-web-page/webfonts/fa-brands-400.woff",
+  "/weather-web-page/webfonts/fa-brands-400.woff2",
+  "/weather-web-page/webfonts/fa-regular-400.eot",
+  "/weather-web-page/webfonts/fa-regular-400.svg",
+  "/weather-web-page/webfonts/fa-regular-400.ttf",
+  "/weather-web-page/webfonts/fa-regular-400.woff",
+  "/weather-web-page/webfonts/fa-regular-400.woff2",
+  "/weather-web-page/webfonts/fa-solid-900.eot",
+  "/weather-web-page/webfonts/fa-solid-900.svg",
+  "/weather-web-page/webfonts/fa-solid-900.ttf",
+  "/weather-web-page/webfonts/fa-solid-900.woff",
+  "/weather-web-page/webfonts/fa-solid-900.woff2"   
 ];
 
 // cache size limits function
@@ -54,7 +54,7 @@ self.addEventListener("install", evt => {
 
 // activate event
 self.addEventListener("activate", evt => {
-  //console.log('service worker activated');
+  // console.log('service worker activated');
   evt.waitUntil(
     caches.keys().then(keys => {
       //console.log(keys);
@@ -69,7 +69,7 @@ self.addEventListener("activate", evt => {
 
 // fetch event
 self.addEventListener("fetch", evt => {
-  //console.log('fetch event', evt);
+  // console.log('fetch event', evt);
   // check if request is made by chrome extensions or web page
   // if request is made for web page url must contains http.
   if (!(evt.request.url.indexOf("http") === 0)) return; // skip the request. if request is not made with http protocol
@@ -82,7 +82,7 @@ self.addEventListener("fetch", evt => {
           return caches.open(dynamicCacheName).then(cache => {
             cache.put(evt.request.url, fetchRes.clone());
             // check cached items size
-            limitCacheSize(dynamicCacheName, 25);
+            limitCacheSize(dynamicCacheName, 35);
             return fetchRes;
           });
         })

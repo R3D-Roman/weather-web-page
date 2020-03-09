@@ -490,7 +490,7 @@ main {
 
 .temp {
   margin-bottom: 0;
-  font-family: "Special Elite";
+  font-family: 'Special Elite', cursive;
   text-align: center;
 }
 
@@ -509,7 +509,7 @@ main {
 .font,
 .city-title,
 .country-title {
-  font-family: "Special Elite";
+  font-family: 'Special Elite', cursive;
 }
 
 .city-title,
