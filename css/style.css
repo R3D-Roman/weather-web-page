@@ -389,7 +389,7 @@ main {
 
 .how-to-search p {
   margin-bottom: 0;
-  font-family: "Odibee Sans", cursive, serif;
+  font-family: "Odibee Sans", cursive;
   color: rgb(2, 247, 177);
   cursor: pointer;
   font-size: 1.3rem;
@@ -490,7 +490,7 @@ main {
 
 .temp {
   margin-bottom: 0;
-  font-family: "Special Elite", serif;
+  font-family: 'Special Elite', cursive;
   text-align: center;
 }
 
@@ -509,7 +509,7 @@ main {
 .font,
 .city-title,
 .country-title {
-  font-family: "Special Elite", serif;
+  font-family: 'Special Elite', cursive;
 }
 
 .city-title,
@@ -522,7 +522,7 @@ main {
 
 .font-title {
   display: inline-block;
-  font-family: "Odibee Sans", cursive, serif;
+  font-family: "Odibee Sans", cursive;
 }
 
 .temp-title {
