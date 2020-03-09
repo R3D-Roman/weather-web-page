@@ -13,7 +13,8 @@ function fetchData(city) {
     `https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current?access_key=4b70f43105f5259724d51cac64829096&query=${city}`
   )
     .then(response => response.json())
-    .then(data => generateHTML(data));
+    .then(data => generateHTML(data))
+    .catch(error => console.log("Looks like there was a problem!", error));
 }
 
 // end api fetch functions ===================================================================================================
