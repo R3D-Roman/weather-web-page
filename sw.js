@@ -1,5 +1,5 @@
-const staticCacheName = "site-static-v2";
-const dynamicCacheName = "site-dynamic-v2";
+const staticCacheName = "site-static-v1";
+const dynamicCacheName = "site-dynamic-v1";
 
 /* This pathes is for weather page of github pages! for local usage just update "assets" for:
 "index.html",
