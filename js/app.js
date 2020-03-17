@@ -464,12 +464,9 @@ weatherCodes = [
 
 function generateHTML(data) {
   wetherInfoWrapper.innerHTML = "";
-  const value = Object.entries(data);
-  value.concat(data);
-  // console.log("Console.log: ", value[1][0]);
-  // for (let i = 0; i < value.length; i++) {}
-  if (value[1][0] != "error") {
-    icons.push(value[2][1].weather_icons);
+  // console.log(data);
+  if (!data.error) {
+    icons.push(data.current.weather_icons);
     let div = document.createElement("div");
     div.classList = "info-card";
     wetherInfoWrapper.appendChild(div);
@@ -482,12 +479,12 @@ function generateHTML(data) {
             icons
           )}" alt="Weather Icons"></div>
           <ul class="city-list">
-          <li class="code-title">${weatherCode(value[2][1].weather_code)}</li>
+          <li class="code-title">${weatherCode(data.current.weather_code)}</li>
           <li class="city-title"><i class="fas fa-city logo"></i>${
-            value[1][1].name
+            data.location.name
           }</li>
           <li class="country-title"><i class="fas fa-globe-asia logo"></i> ${
-            value[1][1].country
+            data.location.country
           }</li>
           </ul>
            <hr>
@@ -495,32 +492,32 @@ function generateHTML(data) {
           <h3 class="list-button">Detailed Information</h3>
           <ul class="temp-wrap list-show">
           <li class="title-space"><i class="fas fa-temperature-low logo"> </i><span class="font-title"> FeelsLike: </span></li>
-          <li class="temp">${value[2][1].feelslike}&#8451;</li>
+          <li class="temp">${data.current.feelslike}&#8451;</li>
           <li class="title-space"><i class="fas fa-cloud logo"></i><span class="font-title"> Cloudcover: </span> </li>
-          <li class="temp">${value[2][1].cloudcover}%</li>
+          <li class="temp">${data.current.cloudcover}%</li>
           <li class="title-space"><i class="fas fa-tint logo"></i><span class="font-title"> Precipitation: </span> </li>
-          <li class="temp">${value[2][1].precip}%</li>
+          <li class="temp">${data.current.precip}%</li>
           </ul>
           <div class="wall"></div>
           <ul class="temp-wrap order">
           <li class="temp-title temp"><i class="fas fa-temperature-low logo-temp logo"></i><span class="font-title"> Temp: </span></li>
-          <li class="temp-text temp">${value[2][1].temperature}&#8451;</li>
+          <li class="temp-text temp">${data.current.temperature}&#8451;</li>
           <li class="title-time font"><i class="far fa-clock logo"></i><span class="font-title"> LocalTime: </span> ${formatTime(
-            value[1][1].localtime
+            data.location.localtime
           )}</li>
           <li class="font title-date"><i class="fas fa-calendar-alt logo"></i><span class="font-title"> Date: </span> ${formatDate(
-            value[1][1].localtime
+            data.location.localtime
           )}</li>
           </ul>
            <hr class="order">
           <div class="wall"></div>
           <ul class="temp-wrap list-show">
           <li class="title-space"><i class="fas fa-wind logo"></i><span class="font-title"> Wind Speed: </span></li>
-          <li class="temp"> ${value[2][1].wind_speed} km/h</li>
+          <li class="temp"> ${data.current.wind_speed} km/h</li>
           <li class="title-space"><i class="fas fa-smog logo"></i><span class="font-title"> Visibility: </span></li>
-          <li class="temp">${value[2][1].visibility} km</li>
+          <li class="temp">${data.current.visibility} km</li>
           <li class="title-space"><i class="fab fa-cloudscale logo"></i><span class="font-title"> Atm Pressure: </span> </li>
-          <li class="temp">${value[2][1].pressure} mbar</li>
+          <li class="temp">${data.current.pressure} mbar</li>
           </ul>
        </div>
     </div> `;
