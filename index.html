@@ -1,190 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Search Web Page</title>
+    <link rel="icon" href="icon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" href="icon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="icon/favicon-96x96.png" sizes="96x96" />
+    <link
+      rel="canonical"
+      href="https://r3d-roman.github.io/weather-web-page/"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="font-awesome/all.min.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- iOS support -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="icon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="icon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="icon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="icon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="icon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="icon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="icon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icon/apple-icon-180x180.png"
+    />
+    <link rel="apple-touch-startup-image" href="icon/apple-icon-180x180.png" />
+    <link
+      href="splashscreens/iphone5_splash.png"
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/iphone6_splash.png"
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/iphoneplus_splash.png"
+      media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/iphonex_splash.png"
+      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/iphonexr_splash.png"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/iphonexsmax_splash.png"
+      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/ipad_splash.png"
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/ipadpro1_splash.png"
+      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/ipadpro3_splash.png"
+      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="splashscreens/ipadpro2_splash.png"
+      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Weather Search Web Page" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#7f4ed5" />
+    <!-- #7f4ed5   #975DFA -->
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Weather Search Web Page</title>
-  <link rel="icon" href="icon/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" href="icon/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" href="icon/favicon-96x96.png" sizes="96x96">
-  <link rel="canonical" href="https://r3d-roman.github.io/weather-web-page/" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="font-awesome/all.min.css" />
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- iOS support -->
-  <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
-  <link rel="apple-touch-startup-image" href="icon/apple-icon-180x180.png">
-  <link href="splashscreens/iphone5_splash.png"
-    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
-    rel="apple-touch-startup-image" />
-  <link href="splashscreens/iphone6_splash.png"
-    media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
-    rel="apple-touch-startup-image" />
-  <link href="splashscreens/iphoneplus_splash.png"
-    media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
-    rel="apple-touch-startup-image" />
-  <link href="splashscreens/iphonex_splash.png"
-    media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
-    rel="apple-touch-startup-image" />
-  <link href="splashscreens/iphonexr_splash.png"
-    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
-    rel="apple-touch-startup-image" />
-  <link href="splashscreens/iphonexsmax_splash.png"
-    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
-    rel="apple-touch-startup-image" />
-  <link href="splashscreens/ipad_splash.png"
-    media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
-    rel="apple-touch-startup-image" />
-  <link href="splashscreens/ipadpro1_splash.png"
-    media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
-    rel="apple-touch-startup-image" />
-  <link href="splashscreens/ipadpro3_splash.png"
-    media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
-    rel="apple-touch-startup-image" />
-  <link href="splashscreens/ipadpro2_splash.png"
-    media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
-    rel="apple-touch-startup-image" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-touch-fullscreen" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="Weather Search Web Page" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="theme-color" content="#7f4ed5">
-  <!-- #7f4ed5   #975DFA -->
-</head>
+  <body>
+    <div id="modal-offline">
+      <h2>You are offline</h2>
+      <button class="modal-offline-btn btn-close-offline">Close</button>
+    </div>
+    <div id="modal-online">
+      <h2>You are online</h2>
+      <button class="modal-online-btn btn-close-online">Close</button>
+    </div>
 
-<body>
+    <div class="backdrop"></div>
+    <div class="modal">
+      <h2>Api Information</h2>
+      <p>
+        Hi, guys! I have created a website using API requests, but there is one
+        issue. When the weather icon is being loaded, some times not all the
+        icons are displayed on iOS. The case is, that some icons are in WebP
+        format. I just wanted to explain the reason for this issue. Thank you
+        and enjoy my app.
+      </p>
+      <button class="modal-btn btn-close">Close</button>
+    </div>
+    <header>
+      <h1 class="title ml9">
+        <span class="text-wrapper">
+          <span class="letters">Weather Search Web Page</span>
+        </span>
+      </h1>
+    </header>
 
-  <div id="modal-offline">
-    <h2>You are offline</h2>
-    <button class="modal-offline-btn btn-close-offline">Close</button>
-  </div>
-  <div id="modal-online">
-    <h2>You are online</h2>
-    <button class="modal-online-btn btn-close-online">Close</button>
-  </div>
-
-  <div class="backdrop"></div>
-  <div class="modal">
-    <h2>Api Information</h2>
-    <p>Hi, guys! I have created a website using API requests, but there is one issue. When the weather icon is being
-      loaded, some times not all the icons are displayed on iOS. The case is, that some icons are in WebP format.
-      I just wanted to explain the reason for this issue. Thank you and enjoy my app.</p>
-    <button class="modal-btn btn-close">Close</button>
-  </div>
-  <header>
-    <h1 class="title ml9">
-      <span class="text-wrapper">
-        <span class="letters">Weather Search Web Page</span>
-      </span>
-    </h1>
-  </header>
-
-  <main>
-    <div class="wrapper">
-      <div class="how-to-search">
-        <p class="popup-btn">Detailed search?</p>
-        <span class="popuptext">Just enter city with country: "London Canada"</span>
-      </div>
-      <section>
-        <div class="input-wrapper">
-          <div class="auto-complete">
-            <input type="text" class="input" autocomplete="off" placeholder="search of capital..." />
-            <div class="div-autocomplete"></div>
-          </div>
-          <button class="btn">search</button>
+    <main>
+      <div class="wrapper">
+        <div class="how-to-search">
+          <p class="popup-btn">Detailed search?</p>
+          <span class="popuptext"
+            >Just enter city with country: "London Canada"</span
+          >
         </div>
+        <section>
+          <div class="input-wrapper">
+            <div class="auto-complete">
+              <input
+                type="text"
+                class="input"
+                autocomplete="off"
+                placeholder="search of capital..."
+              />
+              <div class="div-autocomplete"></div>
+            </div>
+            <button class="btn">search</button>
+          </div>
 
-        <div class="wether-info-wrapper">
+          <div class="wether-info-wrapper">
+            <div id="welcome-div" class="info-card">
+              <div class="temperature">
+                <div class="temperature-header"></div>
 
-          <div id="welcome-div" class="info-card">
-
-            <div class="temperature">
-
-              <div class="temperature-header"></div>
-
-              <div class="wrapper-weather-icons"><img class="icons-weather icon-welcome" src="img/mars-img.png" alt="Planet Mars"></div>
-              <ul class="city-list">
-                <li class="country-title"><i class="fas fa-globe-asia logo"></i>Mars</li>
-              </ul>
-              <hr>
-              <div class="col">
-                <h3 class="list-button">Detailed Information</h3>
-                <ul class="temp-wrap list-show">
-                  <li class="title-space"><i class="fas fa-temperature-low logo"> </i><span class="font-title">
-                      FeelsLike: </span></li>
-                  <li class="temp">-170&#8451;</li>
-                  <li class="title-space"><i class="fas fa-cloud logo"></i><span class="font-title"> Cloudcover: </span>
+                <div class="wrapper-weather-icons">
+                  <img
+                    class="icons-weather icon-welcome"
+                    src="img/mars-img.png"
+                    alt="Planet Mars"
+                  />
+                </div>
+                <ul class="city-list">
+                  <li class="country-title">
+                    <i class="fas fa-globe-asia logo"></i>Mars
                   </li>
-                  <li class="temp">70%</li>
-                  <li class="title-space"><i class="fas fa-tint logo"></i><span class="font-title"> Precipitation:
-                    </span> </li>
-                  <li class="temp">0%</li>
                 </ul>
-                <div class="wall"></div>
-                <ul class="temp-wrap order">
-                  <li class="temp-title temp"><i class="fas fa-temperature-low logo-temp logo"></i><span
-                      class="font-title"> Temp: </span></li>
-                  <li class="temp-text temp">-125&#8451;</li>
-                  <li class="title-time font"><i class="far fa-clock logo"></i><span class="font-title"> LocalTime:
-                    </span>
-                    14:37</li>
-                </ul>
-                <hr class="order">
-                <div class="wall"></div>
-                <ul class="temp-wrap list-show">
-                  <li class="title-space"><i class="fas fa-wind logo"></i><span class="font-title"> Wind Speed: </span>
-                  </li>
-                  <li class="temp"> 50 km/h</li>
-                  <li class="title-space"><i class="fas fa-smog logo"></i><span class="font-title"> Visibility: </span>
-                  </li>
-                  <li class="temp"> 5 km</li>
-                  <li class="title-space"><i class="fab fa-cloudscale logo"></i><span class="font-title"> Atm Pressure:
-                    </span> </li>
-                  <li class="temp"> 1500 mbar</li>
-                </ul>
+                <hr />
+                <div class="col">
+                  <h3 class="list-button">Detailed Information</h3>
+                  <ul class="temp-wrap list-show">
+                    <li class="title-space">
+                      <i class="fas fa-temperature-low logo"> </i
+                      ><span class="font-title"> FeelsLike: </span>
+                    </li>
+                    <li class="temp">-170&#8451;</li>
+                    <li class="title-space">
+                      <i class="fas fa-cloud logo"></i
+                      ><span class="font-title"> Cloudcover: </span>
+                    </li>
+                    <li class="temp">70%</li>
+                    <li class="title-space">
+                      <i class="fas fa-tint logo"></i
+                      ><span class="font-title"> Precipitation: </span>
+                    </li>
+                    <li class="temp">0%</li>
+                  </ul>
+                  <div class="wall"></div>
+                  <ul class="temp-wrap order">
+                    <li class="temp-title temp">
+                      <i class="fas fa-temperature-low logo-temp logo"></i
+                      ><span class="font-title"> Temp: </span>
+                    </li>
+                    <li class="temp-text temp">-125&#8451;</li>
+                    <li class="title-time font">
+                      <i class="far fa-clock logo"></i
+                      ><span class="font-title"> LocalTime: </span> 14:37
+                    </li>
+                  </ul>
+                  <hr class="order" />
+                  <div class="wall"></div>
+                  <ul class="temp-wrap list-show">
+                    <li class="title-space">
+                      <i class="fas fa-wind logo"></i
+                      ><span class="font-title"> Wind Speed: </span>
+                    </li>
+                    <li class="temp">50 km/h</li>
+                    <li class="title-space">
+                      <i class="fas fa-smog logo"></i
+                      ><span class="font-title"> Visibility: </span>
+                    </li>
+                    <li class="temp">5 km</li>
+                    <li class="title-space">
+                      <i class="fab fa-cloudscale logo"></i
+                      ><span class="font-title"> Atm Pressure: </span>
+                    </li>
+                    <li class="temp">1500 mbar</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </main>
 
-  </main>
+    <div class="row"></div>
+    <footer>
+      <p>
+        <small>Crafted by</small> R3D<small><sup>&copy;</sup></small>
+      </p>
+    </footer>
 
-  <div class="row"></div>
-  <footer>
-    <p>
-      <small>Crafted by</small> R3D<small><sup>&copy;</sup></small>
-    </p>
-  </footer>
-
-
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/weather-web-page/sw.js', {
-          scope: '/weather-web-page/'
-        })
-        .then(reg => console.log('service worker registered', reg))
-        .catch(err => console.log('service worker not registered', err));
-    }
-  </script>
-  <script src="font-awesome/all.min.js"></script>
-  <!-- header h1 animation -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-  <script src="js/app.js"></script>
-</body>
-
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/weather-web-page/sw.js", {
+            scope: "/weather-web-page/",
+          })
+          .then((reg) => console.log("service worker registered", reg))
+          .catch((err) => console.log("service worker not registered", err));
+      }
+    </script>
+    <script src="font-awesome/all.min.js"></script>
+    <!-- header h1 animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>
