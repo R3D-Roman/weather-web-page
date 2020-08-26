@@ -230,7 +230,6 @@ const listOfCapitals = [
   "Seattle",
   "Washington",
   "Vancouver",
-  "Toronto",
   "Montreal",
   "Boston",
   "Miami",
