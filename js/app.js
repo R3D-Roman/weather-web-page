@@ -12,9 +12,9 @@ function fetchData(city) {
   fetch(
     `https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current?access_key=4b70f43105f5259724d51cac64829096&query=${city}`
   )
-    .then(response => response.json())
-    .then(data => generateHTML(data))
-    .catch(error => console.log("Looks like there was a problem!", error));
+    .then((response) => response.json())
+    .then((data) => generateHTML(data))
+    .catch((error) => console.log("Looks like there was a problem!", error));
 }
 
 // end api fetch functions ===================================================================================================
@@ -220,244 +220,258 @@ const listOfCapitals = [
   "Hanoi",
   "Sanaa",
   "Lusaka",
-  "Harare"
+  "Harare",
+  "New York",
+  "Chicago",
+  "Los Angeles",
+  "Las Vegas",
+  "Toronto",
+  "San Francisco",
+  "Seattle",
+  "Washington",
+  "Vancouver",
+  "Toronto",
+  "Montreal",
+  "Boston",
+  "Miami",
+  "Orlando",
 ];
 
 weatherCodes = [
   {
     code: 113,
-    description: "Clear/Sunny"
+    description: "Clear/Sunny",
   },
 
   {
     code: 116,
-    description: "Partly Cloudy"
+    description: "Partly Cloudy",
   },
 
   {
     code: 119,
-    description: "Cloudy"
+    description: "Cloudy",
   },
 
   {
     code: 122,
-    description: "Overcast"
+    description: "Overcast",
   },
 
   {
     code: 143,
-    description: "Mist"
+    description: "Mist",
   },
 
   {
     code: 176,
-    description: "Patchy rain nearby"
+    description: "Patchy rain nearby",
   },
 
   {
     code: 179,
-    description: "Patchy snow nearby"
+    description: "Patchy snow nearby",
   },
 
   {
     code: 182,
-    description: "Patchy sleet nearby"
+    description: "Patchy sleet nearby",
   },
 
   {
     code: 185,
-    description: "Patchy freezing drizzle nearby"
+    description: "Patchy freezing drizzle nearby",
   },
 
   {
     code: 200,
-    description: "Thundery outbreaks in nearby"
+    description: "Thundery outbreaks in nearby",
   },
 
   {
     code: 227,
-    description: "Blowing snow"
+    description: "Blowing snow",
   },
 
   {
     code: 230,
-    description: "Blizzard"
+    description: "Blizzard",
   },
 
   {
     code: 248,
-    description: "Fog"
+    description: "Fog",
   },
 
   {
     code: 260,
-    description: "Freezing fog"
+    description: "Freezing fog",
   },
 
   {
     code: 263,
-    description: "Patchy light drizzle"
+    description: "Patchy light drizzle",
   },
 
   {
     code: 266,
-    description: "Light drizzle"
+    description: "Light drizzle",
   },
 
   {
     code: 281,
-    description: "Freezing drizzle"
+    description: "Freezing drizzle",
   },
 
   {
     code: 284,
-    description: "Heavy freezing drizzle"
+    description: "Heavy freezing drizzle",
   },
 
   {
     code: 293,
-    description: "Patchy light rain"
+    description: "Patchy light rain",
   },
 
   {
     code: 296,
-    description: "Light rain"
+    description: "Light rain",
   },
 
   {
     code: 299,
-    description: "Moderate rain at times"
+    description: "Moderate rain at times",
   },
 
   {
     code: 302,
-    description: "Moderate rain"
+    description: "Moderate rain",
   },
 
   {
     code: 305,
-    description: "Heavy rain at times"
+    description: "Heavy rain at times",
   },
 
   {
     code: 308,
-    description: "Heavy rain"
+    description: "Heavy rain",
   },
 
   {
     code: 311,
-    description: "Light freezing rain"
+    description: "Light freezing rain",
   },
 
   {
     code: 314,
-    description: "Moderate or Heavy freezing rain"
+    description: "Moderate or Heavy freezing rain",
   },
 
   {
     code: 317,
-    description: "Light sleet"
+    description: "Light sleet",
   },
 
   {
     code: 323,
-    description: "Patchy light snow"
+    description: "Patchy light snow",
   },
 
   {
     code: 326,
-    description: "Light snow"
+    description: "Light snow",
   },
 
   {
     code: 329,
-    description: "Patchy moderate snow"
+    description: "Patchy moderate snow",
   },
 
   {
     code: 332,
-    description: "Moderate snow"
+    description: "Moderate snow",
   },
 
   {
     code: 335,
-    description: "Patchy heavy snow"
+    description: "Patchy heavy snow",
   },
 
   {
     code: 338,
-    description: "Heavy snow"
+    description: "Heavy snow",
   },
 
   {
     code: 350,
-    description: "Ice pellets"
+    description: "Ice pellets",
   },
 
   {
     code: 353,
-    description: "Light rain shower"
+    description: "Light rain shower",
   },
 
   {
     code: 356,
-    description: "Moderate or heavy rain shower"
+    description: "Moderate or heavy rain shower",
   },
 
   {
     code: 359,
-    description: "Torrential rain shower"
+    description: "Torrential rain shower",
   },
 
   {
     code: 362,
-    description: "Light sleet showers"
+    description: "Light sleet showers",
   },
 
   {
     code: 365,
-    description: "Moderate or heavy sleet showers"
+    description: "Moderate or heavy sleet showers",
   },
 
   {
     code: 368,
-    description: "Light snow showers"
+    description: "Light snow showers",
   },
 
   {
     code: 371,
-    description: "Moderate or heavy snow showers"
+    description: "Moderate or heavy snow showers",
   },
 
   {
     code: 374,
-    description: "Light showers of ice pellets"
+    description: "Light showers of ice pellets",
   },
 
   {
     code: 377,
-    description: "Moderate or heavy showers of ice pellets"
+    description: "Moderate or heavy showers of ice pellets",
   },
 
   {
     code: 386,
-    description: "Patchy light rain in area with thunder"
+    description: "Patchy light rain in area with thunder",
   },
 
   {
     code: 389,
-    description: "Moderate or heavy rain in area with thunder"
+    description: "Moderate or heavy rain in area with thunder",
   },
 
   {
     code: 392,
-    description: "Patchy light snow in area with thunder"
+    description: "Patchy light snow in area with thunder",
   },
 
   {
     code: 395,
-    description: "Moderate or heavy snow in area with thunder"
-  }
+    description: "Moderate or heavy snow in area with thunder",
+  },
 ];
 
 // generate html functions ========================================================================================================
@@ -565,7 +579,7 @@ function formatDate(data) {
 
 function weatherCode(code) {
   let codes;
-  weatherCodes.forEach(element => {
+  weatherCodes.forEach((element) => {
     if (element.code === code) {
       codes = element.description;
     }
@@ -582,7 +596,7 @@ function autoComplete(list) {
   divAutocomplete.classList.add("show");
   let valueInput = input.value.toLowerCase();
 
-  filterList = list.filter(lists => {
+  filterList = list.filter((lists) => {
     return lists.toLowerCase().indexOf(valueInput) > -1;
   });
 
@@ -590,7 +604,7 @@ function autoComplete(list) {
     divAutocomplete.classList.remove("show");
     divAutocomplete.innerHTML = "";
   }
-  filterList.slice(0, 5).forEach(element => {
+  filterList.slice(0, 5).forEach((element) => {
     let div = document.createElement("DIV");
     div.classList = "list-mutch";
     divAutocomplete.appendChild(div);
@@ -630,7 +644,7 @@ const footer = document.querySelector("footer");
 const disp = localStorage.getItem("display");
 
 // local storage backdrop
-window.addEventListener("load", e => {
+window.addEventListener("load", (e) => {
   if (localStorage.getItem("display") === null) {
     backdrop.style.visibility = "visible";
     modalMessage.style.visibility = "visible";
@@ -652,27 +666,27 @@ window.addEventListener("load", e => {
       .timeline({ loop: false })
       .add({
         targets: ".ml9 .letter",
-        duration: 500
+        duration: 500,
       })
       .add({
         targets: ".ml9 .letter",
         scale: [0, 1],
         duration: 1500,
         elasticity: 600,
-        delay: (el, i) => 45 * (i + 1)
+        delay: (el, i) => 45 * (i + 1),
       })
       .add({
         targets: ".ml9",
         opacity: 1,
         duration: 1000,
         easing: "easeOutExpo",
-        delay: 1000
+        delay: 1000,
       });
   }
 });
 
 // close backdrop and add localStorage
-btnClose.addEventListener("click", e => {
+btnClose.addEventListener("click", (e) => {
   backdrop.style.display = "none";
   modalMessage.style.display = "none";
   header.style.display = "block";
@@ -690,21 +704,21 @@ btnClose.addEventListener("click", e => {
     .timeline({ loop: false })
     .add({
       targets: ".ml9 .letter",
-      duration: 500
+      duration: 500,
     })
     .add({
       targets: ".ml9 .letter",
       scale: [0, 1],
       duration: 1500,
       elasticity: 600,
-      delay: (el, i) => 45 * (i + 1)
+      delay: (el, i) => 45 * (i + 1),
     })
     .add({
       targets: ".ml9",
       opacity: 1,
       duration: 1000,
       easing: "easeOutExpo",
-      delay: 1000
+      delay: 1000,
     });
 
   // end header title animation
@@ -718,13 +732,13 @@ input.addEventListener("keyup", () => {
   autoComplete(listOfCapitals);
 });
 
-input.addEventListener("keydown", e => {
+input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
   }
 });
 
-input.addEventListener("keyup", e => {
+input.addEventListener("keyup", (e) => {
   if (e.key === "ArrowDown") {
     resetCursor();
     if (resultsCursor < divAutocomplete.children.length - 1) {
@@ -765,14 +779,14 @@ input.addEventListener("keyup", e => {
   }
 });
 
-document.addEventListener("mouseover", e => {
+document.addEventListener("mouseover", (e) => {
   if (e.target.classList.contains("list-mutch")) {
     resetCursor();
     resultsCursor = -1;
   }
 });
 
-document.addEventListener("click", e => {
+document.addEventListener("click", (e) => {
   if (e.target.classList == "list-mutch") {
     input.value = e.target.innerHTML;
     divAutocomplete.classList.remove("show");
@@ -780,19 +794,21 @@ document.addEventListener("click", e => {
 });
 
 // search for city weather
-btn.addEventListener("click", e => {
-  let inputValue = input.value.toLowerCase();
-  fetchData(inputValue);
+btn.addEventListener("click", (e) => {
+  let inputValue = input.value;
+  const inputValueCapitalized =
+    inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
+  fetchData(inputValueCapitalized);
   input.value = "";
   btn.disabled = true;
 });
 
 // popup how to search
-popUp.addEventListener("click", e => {
+popUp.addEventListener("click", (e) => {
   togglePopup.classList.toggle("show-popup");
 });
 
-document.addEventListener("click", e => {
+document.addEventListener("click", (e) => {
   if (e.target.classList != "popup-btn") {
     togglePopup.classList.remove("show-popup");
   }
@@ -802,10 +818,10 @@ document.addEventListener("click", e => {
 });
 
 // popup more details on mobile version
-document.addEventListener("click", e => {
+document.addEventListener("click", (e) => {
   if (e.target.classList == "list-button") {
     const listShow = document.querySelectorAll(".list-show");
-    listShow.forEach(element => {
+    listShow.forEach((element) => {
       element.classList.toggle("show");
     });
   }
@@ -817,7 +833,7 @@ const modalOnline = document.querySelector("#modal-online");
 const closeOfflineBtn = document.querySelector(".btn-close-offline");
 const closeOnlineBtn = document.querySelector(".btn-close-online");
 
-window.addEventListener("load", e => {
+window.addEventListener("load", (e) => {
   function handleNetworkChange(e) {
     if (navigator.onLine) {
       modalOffline.style.visibility = "hidden";
@@ -831,10 +847,10 @@ window.addEventListener("load", e => {
   window.addEventListener("offline", handleNetworkChange);
 });
 
-closeOfflineBtn.addEventListener("click", e => {
+closeOfflineBtn.addEventListener("click", (e) => {
   modalOffline.style.visibility = "hidden";
 });
 
-closeOnlineBtn.addEventListener("click", e => {
+closeOnlineBtn.addEventListener("click", (e) => {
   modalOnline.style.visibility = "hidden";
 });
